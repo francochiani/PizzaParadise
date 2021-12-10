@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Ubuntu:400,700&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+
+/*------Estilos básicos------*/
+img{
+    display: block;
+    width:100%;
+    max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;    
+}
+
+.container{
+    width: 100%;
+    margin: auto; 
+}
+
+.c--flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column{
+    width: 100%;
+}
+
+/*-------Estilos del header-------*/
+.header{
+    width: 100%;
+    background: black;
+}
+
+.logo{
+    width: 100%;
+
+}
+.logo--texto{
+    font-size:2.5em;
+    color:#FF8c00;
+    padding: 5px;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 100;
+}
+.logo--imagen{
+    width:0;
+}
+/*-------Estilos del menú-------*/
+.main-nav{
+    width: 100%;
+    position: relative;
+    z-index: 2000;
+    padding: 10px;
+}
+.icon-menu{
+    display: block;
+    color:white;
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align:center;
+    cursor: pointer;
+    font-size: 2.2em;
+}
+.menu{
+    position: absolute;
+    top: 60px;
+    left:0;
+    width: 100%;
+    background: rgba(0,0,0,.85);
+    padding: 0;
+    margin:0;
+    list-style: none;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s linear;
+}
+.menu_link{
+    display: block;
+    padding: 15px;
+    color:white;
+    text-decoration: none;
+}
+.menu_link:hover{
+    background: #FF4500;
+}
+
+.menu_link--select{
+    background: #FF8c00;
+}
+
+.mostrar{
+    height: 190px;
+}
+/*-------Estilos del banner-------*/
+.banner{
+    margin-top:-65px;
+    position:relative;
+}
+.banner:before{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.8);
+    z-index: 1000;
+    top:0;
+}
+.banner_img{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+.banner_content{
+     width: 90%;
+     color:white;
+     text-align: center;
+     position:absolute;
+     z-index: 1500;
+     top:50%;
+     left: 50%;
+     transform: translateX(-50%) translateY(-50%);
+     font-size: 1.5em;
+     font-weight: bold;
+}
+
+/*-------Estilos principales pag. inicio-------*/
+.group--color .container{
+    background:#FF8c00;
+    color:white;
+    padding: 20px;
+	width:100%;
+	text-align:center;
+	
+}
+.main_description{
+  	padding-right:3%;
+}
+.main_title{
+    margin: 0;
+    font-size: 2em;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 100;
+ }
+
+ .column_title{
+     font-size: 1.7em;
+     text-align: center;
+     padding-top: 20px;
+	 color:#FF8c00;
+	 
+ }
+
+ .column_txt{
+     padding: 10px 10px 0 10px;
+     padding-top: 0;
+     font-style: 1.5em;
+     text-align: justify;
+ }
+
+/*-------Estilos principales pag. nosotros-------*/
+.nosotros{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nosotros .c--flex{
+    align-items: flex-start;
+}
+
+.nosotros_title{
+
+    color:#FF8c00;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.nosotros_img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin:auto;
+    margin-bottom: 20px;
+    border: 5px solid #FF8C00;
+}
+
+.nosotros_txt{
+    padding: 10px;
+    text-align: justify;
+}
+
+/*-------Estilos principales pag. nosotros-------*/
+.galeria{
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.galeria .c--flex{
+    align-items: flex-start;
+}
+
+.galeria_title{
+    font-family:'Permanent Marker', cursive;
+    color:#FF8c00;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.galeria_img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10%;
+    margin:auto;
+    margin-bottom: 20px;
+    border: 5px solid #FF8C00;
+}
+
+.galeria_txt{
+    padding: 10px;
+    text-align: justify;
+}
+
+/*------Estilos del pie de página--------*/
+.main_footer{
+    background: #222222;
+    color:white;
+    padding: 10px 0 10px;
+    font-style: 0.8em;
+}
+.copy{
+    text-align: center;
+    margin: auto;
+    margin-top: 15 px;
+}
+
+/*--- Social Bar ---*/
+.social-bar {
+	position: fixed;
+	right: 0;
+	top: 80%;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 100;
+}
+
+.icon {
+	color: white;
+	text-decoration: none;
+	padding: .7rem;
+	display: flex;
+	transition: all .2s;
+}
+
+.icon-facebook {
+	background: #2E406E;
+}
+
+.icon-twitter {
+	background: #339DC5;
+}
+
+.icon-instagram {
+	background: #891e35;
+}
+
+.icon:first-child {
+	border-radius: 1rem 0 0 0;
+}
+
+.icon:last-child {
+	border-radius: 0 0 0 1rem;
+}
+
+.icon:hover {
+	padding-right: 2rem;
+	border-radius: 1.3rem 0 0 1.3rem;
+	box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+}
+
+/*-----Estilos resposive-----*/
+@media screen and (min-width:480px){
+    .logo--texto{
+        font-size:0em;
+    }
+    .logo--imagen {
+        width: 30%;
+    }
+    .header{
+        background: none;
+    }
+    .banner{
+        margin-top: -230px;
+        z-index: -1000;
+    }
+    .banner_content{
+        font-size: 2.5em;
+    }
+    .column--50{
+        width: 50%;
+    }
+    .column--33{
+        padding-top: 10px;
+        width: 30%;
+    }
+    .main-nav{
+        background: rgba(0,0,0,0.50);
+        width: 65%;
+        left: 20%;
+        top: -90px;
+    }
+	.main_description{
+        padding-right:1%;
+    }
+    .nosotros_img{
+        width: 150px;
+        height: 150px;
+    }
+    .galeria_img{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width:768px){
+    .nosotros_img{
+        width: 220px;
+        height: 220px;
+    }
+    .logo--imagen {
+        width: 50%;
+    }
+    .banner{
+        margin-top: -250px;
+    } 
+    .galeria_img{
+        width: 250px;
+        height: 250px;
+    } 
+
+}
+
+@media screen and (min-width:1024px){  
+.container{
+    width: 95%;
+}
+.icon-menu{
+    display:none;
+}
+.logo--imagen {
+    width: 60%;
+}
+.main-nav{  
+    background: none;
+}
+.menu{
+    display: flex;
+    height: auto;
+    top:10px;
+   width: auto;
+   left: 20%;
+}
+.banner{
+    margin-top: -250px;
+}
+.nosotros_img{
+    width: 250px;
+    height: 250px;
+}
+.galeria_img{
+    width: 300px;
+    height: 330px;
+}
+}
